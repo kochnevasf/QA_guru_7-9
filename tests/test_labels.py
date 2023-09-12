@@ -1,4 +1,4 @@
-mport allure
+import allure
 from allure import step
 from selene import browser, by, be
 
@@ -13,7 +13,7 @@ def test_github_issue_name():
     with step("Open github main page"):
         browser.open('')
 
-     with step("Insert 'eroshenkoam/allure-example' to the searchbar"):
+    with step("Insert 'eroshenkoam/allure-example' to the searchbar"):
         browser.element('.search-input').click()
         browser.element('.QueryBuilder-Input').type(
             'eroshenkoam/allure-example'
@@ -27,7 +27,7 @@ def test_github_issue_name():
     with step("Open tab Issues"):
         browser.element('#issues-tab').click()
 
-     with step("Issue 'issue_to_test_allure_report' is shown on the page"):
+    with step("Issue 'issue_to_test_allure_report' is shown on the page"):
         browser.element(by.text('issue_to_test_allure_report')).should(be.visible)
 
 
@@ -39,7 +39,7 @@ from allure_commons.types import Severity
 
 def test_no_labels():
     pass
-
+"""
 
 def test_dynamic_labels():
     allure.dynamic.tag("web")
